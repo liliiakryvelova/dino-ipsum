@@ -2,19 +2,20 @@ import $ from 'jquery';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
-// import Triangle from './js/triangle.js';
+import Dinoservice from './Dino-service.js';
 
-// $(function () {
-//   $('#triangle-checker-form').on("submit", function (event) {
-//     event.preventDefault();
-//     console.log('hello');
-//     const length1 = parseInt($('#length1').val());
-//     const length2 = parseInt($('#length2').val());
-//     const length3 = parseInt($('#length3').val());
-//     const triangle = new Triangle(length1, length2, length3);
-//     const response = triangle.checkType();
-//     $('#response').append(`<p>${response}</p>`);
-//   });
- 
-// let request = new XMLHttpRequest();
-// const url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${process.env.API_KEY}`;
+
+$(document).ready(function () {
+  let promise = Dinoservice.getFakeDino();
+  promise.then(function (response) {
+    const body = JSON.parse(response);
+
+    let dinoArray = [];
+    for (let i = 0; i <= body.length - 1; i++) {
+      dinoArray.push(body[i]);
+    }
+    $('#output1').text(dinoArray[0]);
+    $('#output2').text(dinoArray[1]);
+  });
+});
+
