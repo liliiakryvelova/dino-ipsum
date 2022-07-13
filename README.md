@@ -1,6 +1,7 @@
 # _Name of the project_
 
-#### By _**Viktoriia Zubarieva**_
+#### By _**Viktoriia Zubarieva & Liliia Kryvelova**_
+
 ## Description
 
 
@@ -38,4 +39,4 @@
 
 _MIT_
 
-Copyright (c) _2022_ _Viktoriia Zubarieva_
+Copyright (c) _2022_ _Viktoriia Zubarieva_ & _Liliia Kryvelova_
